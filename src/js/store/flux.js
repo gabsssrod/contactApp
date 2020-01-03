@@ -1,4 +1,5 @@
 import { stringify } from "querystring";
+import { useHistory } from "react-router-dom";
 
 const getState = ({ getStore, setStore }) => {
 	return {
@@ -26,7 +27,9 @@ const getState = ({ getStore, setStore }) => {
 						address: b,
 						phone: c
 					})
-				});
+                })
+                let history = useHistory();
+                
 			}
 		}
 	};
