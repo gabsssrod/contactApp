@@ -2,18 +2,18 @@ import { stringify } from "querystring";
 
 const getState = ({ getStore, setStore }) => {
 	return {
-		store: { contact [
-            {
-            full_name: "",
-			email: "",
-			agenda_slug: "",
-			address: "",
-			phone: ""
-            }
-    
-        ]
-			
+		store: {
+			contact: [
+				{
+					full_name: "",
+					email: "",
+					agenda_slug: "",
+					address: "",
+					phone: ""
+				}
+			]
 		},
+
 		actions: {
 			addContact: (a, b, c, d) => {
 				fetch("https://assets.breatheco.de/apis/fake/contact/", {
