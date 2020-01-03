@@ -2,8 +2,17 @@ import { stringify } from "querystring";
 
 const getState = ({ getStore, setStore }) => {
 	return {
-		store: {
-			//Your data structures, A.K.A Entities
+		store: { contact [
+            {
+            full_name: "",
+			email: "",
+			agenda_slug: "",
+			address: "",
+			phone: ""
+            }
+    
+        ]
+			
 		},
 		actions: {
 			addContact: (a, b, c, d) => {
