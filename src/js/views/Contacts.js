@@ -10,6 +10,7 @@ export const Contacts = () => {
 	const [state, setState] = useState({
 		showModal: false
 	});
+	const [cardIdModal, setCardIdModal] = useState();
 
 	return (
 		<div className="container">
@@ -25,18 +26,22 @@ export const Contacts = () => {
 							return (
 								<ContactCard
 									key={index}
+									cardId={item.id}
 									name={item.full_name}
 									address={item.address}
 									phone={item.phone}
 									email={item.email}
-									onDelete={() => setState({ showModal: true })}
+									onDelete={() => {
+										setState({ showModal: true });
+										setCardIdModal(item.id);
+									}}
 								/>
 							);
 						})}
 					</ul>
 				</div>
 			</div>
-			<Modal show={state.showModal} onClose={() => setState({ showModal: false })} />
+			<Modal cardModal={cardIdModal} show={state.showModal} onClose={() => setState({ showModal: false })} />
 		</div>
 	);
 };

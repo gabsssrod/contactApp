@@ -59,7 +59,8 @@ ContactCard.propTypes = {
 	email: PropTypes.string,
 	phone: PropTypes.string,
 	history: PropTypes.object,
-	onDelete: PropTypes.func
+	onDelete: PropTypes.func,
+	cardModal: PropTypes.string
 };
 
 /**
